@@ -1,0 +1,245 @@
+:root {
+      --accent: #2563eb;
+      --text: #172033;
+      --muted: #5b6475;
+      --line: #dfe4ec;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .resume {
+      width: min(100% - 32px, 980px);
+      margin: 32px auto;
+      background: var(--card);
+      box-shadow: 0 12px 40px rgba(23, 32, 51, 0.08);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* Header */
+    header {
+      padding: 42px 52px 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .name {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .role {
+      margin: 8px 0 18px;
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+    }
+
+    /* Main */
+    main {
+      padding: 32px 52px 44px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 15px;
+      font-size: 0.88rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-title::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .objective {
+      margin: 0;
+      color: #394356;
+    }
+
+    /* Education & Projects */
+    .education-item,
+    .project-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #edf0f4;
+    }
+
+    .education-item:first-child,
+    .project-item:first-child {
+      padding-top: 2px;
+    }
+
+    .education-item:last-child,
+    .project-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    .item-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 750;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .institution,
+    .tech {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      color: #394356;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 26px;
+    }
+
+    .skill {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: #fbfcfe;
+    }
+
+    .skill strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.9rem;
+    }
+
+    .skill span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Certifications */
+    .certifications {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .cert {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      color: #394356;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      .resume {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      header,
+      main {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .item-top {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .skills,
+      .certifications {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Print */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .resume {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      header,
+      main {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
