@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deeksha H K - BCA student and aspiring software developer">
+  <title>Deeksha H K | Resume</title>
+
+  <style>
+    :root {
+      --accent: #2563eb;
+      --text: #172033;
+      --muted: #5b6475;
+      --line: #dfe4ec;
+      --bg: #f4f7fb;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .resume {
+      width: min(100% - 32px, 980px);
+      margin: 32px auto;
+      background: var(--card);
+      box-shadow: 0 12px 40px rgba(23, 32, 51, 0.08);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* Header */
+    header {
+      padding: 42px 52px 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .name {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .role {
+      margin: 8px 0 18px;
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .contact a:hover {
+      color: var(--accent);
+    }
+
+    /* Main */
+    main {
+      padding: 32px 52px 44px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 15px;
+      font-size: 0.88rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-title::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .objective {
+      margin: 0;
+      color: #394356;
+    }
+
+    /* Education & Projects */
+    .education-item,
+    .project-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #edf0f4;
+    }
+
+    .education-item:first-child,
+    .project-item:first-child {
+      padding-top: 2px;
+    }
+
+    .education-item:last-child,
+    .project-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    .item-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 750;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .institution,
+    .tech {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      color: #394356;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 26px;
+    }
+
+    .skill {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: #fbfcfe;
+    }
+
+    .skill strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.9rem;
+    }
+
+    .skill span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Certifications */
+    .certifications {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .cert {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      color: #394356;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      .resume {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      header,
+      main {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .item-top {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .skills,
+      .certifications {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Print */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .resume {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      header,
+      main {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="resume">
+
+    <!-- HEADER -->
+    <header>
+      <h1 class="name">DEEKSHA H K</h1>
+
+      <p class="role">
+        Aspiring Software Developer
+      </p>
+
+      <div class="contact">
+        <a href="tel:+917760847156">
+          +91-7760847156
+        </a>
+
+        <a href="mailto:hkdeeksha0@gmail.com">
+          hkdeeksha0@gmail.com
+        </a>
+
+        <a
+          href="https://linkedin.com/in/deeksha-h-k"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/"
+          target="_blank"
+        >
+          GitHub
+        </a>
+      </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- CAREER OBJECTIVE -->
+      <section>
+
+        <h2 class="section-title">
+          Career Objective
+        </h2>
+
+        <p class="objective">
+          Motivated BCA student with a strong academic background
+          and a passion for software development. Skilled in
+          programming, web development, and database management,
+          with hands-on experience in full-stack projects.
+          Seeking an entry-level software engineering opportunity
+          to contribute, learn, and grow while building innovative
+          and scalable technology solutions.
+        </p>
+
+      </section>
+
+
+      <!-- EDUCATION -->
+      <section>
+
+        <h2 class="section-title">
+          Education
+        </h2>
+
+        <div class="education-item">
+
+          <div class="item-top">
+
+            <h3 class="item-title">
+              Bachelor of Computer Applications (BCA)
+            </h3>
+
+            <span class="date">
+              2024 – Present
+            </span>
+
+          </div>
+
+          <p class="institution">
+            Amrita Vishwa Vidyapeetham, Mysore
+            · CGPA: 9.13 / 10
+          </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+          <div class="item-top">
+
+            <h3 class="item-title">
+              Pre-University Course (PCMC)
+            </h3>
+
+            <span class="date">
+              2024
+            </span>
+
+          </div>
+
+          <p class="institution">
+            Sadvidya Composite PU College, Mysore
+            · Percentage: 92.83%
+          </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+          <div class="item-top">
+
+            <h3 class="item-title">
+              Secondary School Leaving Certificate (SSLC)
+            </h3>
+
+            <span class="date">
+              2022
+            </span>
+
+          </div>
+
+          <p class="institution">
+            Maria Niketan Higher Primary School, Mysore
+            · Percentage: 97.12%
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- PROJECTS -->
+      <section>
+
+        <h2 class="section-title">
+          Projects
+        </h2>
+
+        <div class="project-item">
+
+          <div class="item-top">
+
+            <h3 class="item-title">
+              Personal Finance Tracker
+            </h3>
+
+            <span class="tech">
+              React · HTML · CSS · JavaScript
+            </span>
+
+          </div>
+
+          <ul>
+
+            <li>
+              Built a personal finance tracking application
+              to manage income and expenses.
+            </li>
+
+            <li>
+              Created an interactive dashboard to monitor
+              financial transactions and balance.
+            </li>
+
+            <li>
+              Added transaction management features including
+              add, view, and delete operations.
+            </li>
+
+            <li>
+              Developed using React.js with a responsive
+              and user-friendly interface.
+            </li>
+
+            <li>
+              Utilized browser local storage to persist
+              transaction data.
+            </li>
+
+            <li>
+              Deployed the application using Netlify and
+              maintained source code on GitHub.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </section>
+
+
+      <!-- TECHNICAL SKILLS -->
+      <section>
+
+        <h2 class="section-title">
+          Technical Skills
+        </h2>
+
+        <div class="skills">
+
+          <div class="skill">
+
+            <strong>
+              Programming Languages
+            </strong>
+
+            <span>
+              Python, C, Java
+            </span>
+
+          </div>
+
+
+          <div class="skill">
+
+            <strong>
+              Frontend Technologies
+            </strong>
+
+            <span>
+              HTML5, CSS3, JavaScript, React.js
+            </span>
+
+          </div>
+
+
+          <div class="skill">
+
+            <strong>
+              Databases
+            </strong>
+
+            <span>
+              MySQL, MongoDB
+            </span>
+
+          </div>
+
+
+          <div class="skill">
+
+            <strong>
+              Core CS Concepts
+            </strong>
+
+            <span>
+              Data Structures and Algorithms (DSA),
+              OOP, DBMS, Operating Systems
+            </span>
+
+          </div>
+
+
+          <div class="skill">
+
+            <strong>
+              Tools & Platforms
+            </strong>
+
+            <span>
+              GitHub, VS Code, Netlify
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CERTIFICATIONS -->
+      <section>
+
+        <h2 class="section-title">
+          Certifications
+        </h2>
+
+        <div class="certifications">
+
+          <div class="cert">
+            Introduction to HTML —
+            Cisco Networking Academy
+          </div>
+
+          <div class="cert">
+            Introduction to CSS —
+            Cisco Networking Academy
+          </div>
+
+          <div class="cert">
+            Introduction to JavaScript —
+            Cisco Networking Academy
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
